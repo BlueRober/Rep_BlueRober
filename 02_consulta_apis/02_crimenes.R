@@ -31,4 +31,8 @@ for (x in 1:length(crimenes)){
 }
 summary(factor(categoria))
 
+#Segunda manera más compacta, que te ahorras el bucle:
+tipo_crimen <- sapply(crimenes, function(resultado) resultado$category)
+table(tipo_crimen)
+
 #La respuesta a este ejercicio debe llamarse 02_crimenes.[R/py]
